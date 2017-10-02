@@ -27,29 +27,24 @@ h1, h2 {
 .container {
 	width: 100%;
 	max-width: 960px;
-	margin: 0px auto;
 	clear: both;
 }
 
 .navbar {
-	position: fixed;
 	background-color: white;
 	overflow: hidden;
 	width: 100%;
 	border-bottom: 5px solid #dddddd;
-	margin: 0 0 0 10px;
-	height: 100px;
+	margin-bottom: 20px;
+	height: auto;
 }
 
 
 #logo {
 	float: left;
-	/*display: inline-block;*/
-	width: 400px;
-	height: 85px;
 	font-size: 30px;
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 50px;
 	margin-left: 30px;
 	margin-bottom: 0;
 	background-color: #4aaaa5;
@@ -63,14 +58,16 @@ nav {
     float: right;
     background-color: #ffffff;
     font-weight: bold;
-	margin-top: 50px;
+    
+	
 }
 
 
-nav a {
+li a {
 	display: inline-block;
 	color: darkgrey;
 	text-align: center;
+	margin-top: 50px;
 	padding-right: 15px;
 	margin-right: 7.5px;
 	margin-left: 7.5px;
@@ -78,15 +75,15 @@ nav a {
 	border-right: 1px solid #dddddd;
 }
 
-nav a:last-child {
+li a:last-child {
 	border-right: 0 none;
 }
-nav a:hover {
+li a:hover {
 	background-color: #4aaaa5;
 	color: white;
 }
 
-nav a:visited {
+li a:visited {
 	display: block;
 	background-color: grey;
 	color: teal;
@@ -121,12 +118,12 @@ img {
 }
 
 #mainarea-container {
-	overflow: hidden;
+	overflow: auto;
 	width: 570px;
 	height: auto;
 	border: #4aaaa5;
 	background-color: white;
-	margin: 20px 20px 20px 30px;
+	margin: 15px 20px 20px 20px;
 	padding: 10px 20px 10px 30px;
 }
 
@@ -136,24 +133,25 @@ img {
 	height: auto;
 	border: #4aaaa5;
 	background-color: white;
-	margin: 30px 20px 50px 30px;
+	margin: 15px 20px 20px 20px;
 	padding: 10px 20px 10px 30px;
+	border-radius: 5px;
+        
 }
 
 .sidebar {
 	float: right;
 	display: block;
-	width: 100%;
-	max-width: 270px;
-	height: 150px;
-	margin-left: 30px;
+	margin-left: 20px;
 	text-align: center;
+	
 }
 
 #connect {
 	width: 100%;
 	max-width: 270px;
-	margin-top: 150px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	background-color: white;
 	overflow: hidden;
 	height: 160px;
@@ -189,12 +187,6 @@ input[type=submit]:hover {
     background-color: #ccc;
 }
 
-#contactform {
-    border-radius: 5px;
-    background-color: white;
-    padding: 20px;
-}
-
 input [type=text]:focus {
 	border: 3px solid #4aaaa5;
 }
@@ -208,22 +200,22 @@ input [type=text]:focus {
 .grid {
 	position: relative;
 	float: left;
-	width: 280px;
+	width: 240px;
 	height: 240px;
-	margin: 20px;
+	margin: 10px;
 	overflow: auto;
 
 }
 
 .grid:nth-child(even) {
 	margin-right: 10px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
-.work img {
+.grid img {
 	width: 100%;
 	border: 0 none;
+	height: 100%;
 }
 
 .grid h3 {
@@ -256,51 +248,42 @@ footer {
 
 @media screen and (max-width: 980px) {
 
-}
-
-@media screen and (max-width: 768px) {
-	#mainheader {
-		position: static;
-		margin: 0;
-		height: auto;
-	}
-	
-	logo {
-		width: 60%;
-		margin-left: 0;
-		margin-right: 0;
-		margin-top: 0;
-	}
-
-	.container {
-		width: 100%;
-	}
-	
-	nav {
-		width: 40%;
-		
-	}
-
-	nav a {
-		padding-right: 5px;
-		padding-left: 5px;
-		
-	}		
-
 	#mainarea-container {
-		width: 680px;
+		overflow: auto;
+		width: 570px !important;
+		margin: 15px 10px 10px 20px;
+		padding: 10px 20px 10px 30px;
 	}
 
 	.sidebar {
-		position: relative;
-		width: 100%;
-		float: none;
-
+		float: right !important;
+		width: 100% !important;
+		max-width: 270px !important;
+		
 	}
 
 	#connect {
+		width: 100% !important;
+		
+}
+
+@media screen and (max-width: 768px) {
+	
+	#mainarea-container {
+	margin-top: 50px;
+	width: 680px;
+	}
+
+	.sidebar {
+		width: 100% !important;
+		
+	}
+			
+	#connect {
 		margin-top: 10px;
 		margin-bottom: 10px;
+		margin-left: 20px;
+		width: 100% !important;
 	}
 
 	.grid {
@@ -322,21 +305,11 @@ footer {
 }
 
 @media screen and (max-width: 640px) {
-	.bob {
-		width: 100%;
-	}
-
-	#mainheader {
-		position: static;
-		margin: 0;
-		height: auto;
-	}
 	
-	#logo {
-		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-		margin-top: 0;
+	#mainarea-container {
+		margin-top: 50px;
+		width: 90% !important;
+		
 	}
 
 	.container {
@@ -344,22 +317,17 @@ footer {
 
 	}
 	
-	nav {
+	.navbar {
 		width: 100%;
-		margin-top: 10px;
-
 	}
 
-	nav a {
+	li a {
 		margin: 0px 50px 10px 50px;
 		text-align: center;
 		border: none;
 	}
 
-	#mainarea-container {
-		width: 90%;
-	}
-
+	
 	#bio-image {
 		width: 100%;
 		height: auto;
@@ -368,12 +336,14 @@ footer {
 	.sidebar {
 		position: relative;
 		float: none;
+		width: 550px !important;
 
 	}
 
 	#connect {
 		margin-top: 10px;
 		margin-bottom: 10px;
+		width: 550px !important;
 		
 	}
 	.grid {
